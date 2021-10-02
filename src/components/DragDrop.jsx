@@ -12,15 +12,18 @@ export default function DragDrop() {
     setFile(pictureData);
   };
 
+
   return (
 
     <>
       { post.actorData === null ?
+        // Renderiza drag and drop
         <div>
           <input type="file" onChange={handleChange} />
           <button onClick={post.upImage}>Search</button>
         </div>
       :
+        // Renderiza el JSON
          <h1>{JSON.stringify(post.actorData)}</h1>
       }
     </>
